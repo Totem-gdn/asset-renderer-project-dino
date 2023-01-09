@@ -29,12 +29,9 @@ class NFTController {
         })
         }
         if (type === 'avatar') {
-          const body_key = `${nft.sex_bio}-${nft.body_type}-${nft.body_strength}-${nft.hair_styles}`;
-          console.log('body_key', body_key);
-          res.render(`layouts/${nft.sex_bio}${nft.body_type}${nft.body_strength}`, {
-            layout: `${nft.sex_bio}${nft.body_type}${nft.body_strength}.hbs`,
+          res.render(`layouts/avatar`, {
+            layout: `avatar.hbs`,
             ...nft,
-            body_key,
             width: width,
             height: height
           })
