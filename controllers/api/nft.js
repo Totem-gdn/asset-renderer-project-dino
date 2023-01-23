@@ -30,7 +30,7 @@ class NFTController {
         }
         if (type === 'avatar') {
           
-          nft.primary_color = nft.primary_color.replace(')', ', 0.5)').replace('rgb', 'rgba');
+          nft['glow_color'] = nft.primary_color.replace(')', ', 0.5)').replace('rgb', 'rgba');
 
           res.render(`layouts/avatar`, {
             layout: `avatar.hbs`,
